@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>展覽作品｜程式設計博物館</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+<script src="sketch.js"></script>
+
+<style>
+
+body{
+margin:0;
+overflow:hidden;
+font-family:sans-serif;
+background:#000;
+}
+
+.title{
+position:absolute;
+top:20px;
+left:40px;
+font-size:26px;
+font-weight:bold;
+color:#222;
+z-index:10;
+}
+
+/* 展覽燈箱 */
+#overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+backdrop-filter:blur(8px);
+display:none;
+justify-content:center;
+align-items:center;
+}
+
+#viewerBox{
+background:white;
+border:14px solid #5c4033;
+box-shadow:0 40px 120px rgba(0,0,0,0.8);
+}
+
+#viewer{
+width:900px;
+height:550px;
+border:none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="title">🎨 程式設計沉浸式展覽（比賽版）</div>
+
+<div id="overlay">
+<div id="viewerBox">
+<iframe id="viewer"></iframe>
+</div>
+</div>
+
+</body>
+</html>
